@@ -3,22 +3,24 @@ package com.driver;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class MediaLibrary {
-	private ArrayList<MediaItem> mediaItems;
+    private ArrayList<MediaItem> mediaItems;
 
     public MediaLibrary() {
-    	// your code goes here
+        mediaItems = new ArrayList<>();
     }
 
     public void addMediaItem(MediaItem item) {
-    	// your code goes here
+        mediaItems.add(item);
     }
 
     public int getMediaItems(){
-    	// your code goes here
         return mediaItems.size();
     }
     public void displayMediaItems() {
-    	// your code goes here
+        for (MediaItem item : mediaItems) {
+            item.displayInfo();
+            System.out.println("-------------------------");
+        }
     }
 
     public static void main(String[] args) {
